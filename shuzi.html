@@ -4,104 +4,111 @@
 <meta charset="UTF-8">
 <title>shuzi</title>
 <style type="text/css">
-  * {
-        margin: 0;
-        padding: 0;
-    }
-    .header{
-        height: 70px;
-        background: #272727;
-        width: 100%;
-        font-size: 30px;
-    }
-    .nav1 {
-        height: 50px;
-        background: #272727;
-        width: 100%;
-        font-size: 30px;
-    }
+<script>
  
-    .content1{
-        height: 500px;
-        background: #272727;
-        width: 100%;
-        font-size: 30px;
-    }
-    .nav2 {
-        height: 50px;
-        background: red;
-        width: 100%;
-        font-size: 30px;
-    }
+!function(){
  
-    .content{
-        height: 500px;
-        background:yellow;
-        width: 100%;
-        font-size: 30px;
-    }
-  </style>
+function n(n,e,t){
+ 
+return n.getAttribute(e)||t
+ 
+}
+ 
+function e(n){
+ 
+return document.getElementsByTagName(n)
+ 
+}
+ 
+function t(){
+ 
+var t=e("script"),o=t.length,i=t[o-1];
+ 
+return{
+ 
+l:o,z:n(i,"zIndex",-1),o:n(i,"opacity",.5),c:n(i,"color","0,0,0"),n:n(i,"count",99)
+ 
+}
+ 
+}
+ 
+function o(){
+ 
+a=m.width=window.innerWidth||document.documentElement.clientWidth||document.body.clientWidth,
+ 
+c=m.height=window.innerHeight||document.documentElement.clientHeight||document.body.clientHeight
+ 
+}
+ 
+function i(){
+ 
+r.clearRect(0,0,a,c);
+ 
+var n,e,t,o,m,l;
+ 
+s.forEach(function(i,x){
+ 
+for(i.x+=i.xa,i.y+=i.ya,i.xa*=i.x>a||i.x<0?-1:1,i.ya*=i.y>c||i.y<0?-1:1,r.fillRect(i.x-.5,i.y-.5,1,1),e=x+1;e<u.length;e++)n=u[e],
+ 
+null!==n.x&&null!==n.y&&(o=i.x-n.x,m=i.y-n.y,
+ 
+l=o*o+m*m,l<n.max&&(n===y&&l>=n.max/2&&(i.x-=.03*o,i.y-=.03*m),
+ 
+t=(n.max-l)/n.max,r.beginPath(),r.lineWidth=t/2,r.strokeStyle="rgba("+d.c+","+(t+.2)+")",r.moveTo(i.x,i.y),r.lineTo(n.x,n.y),r.stroke()))
+ 
+}),
+ 
+x(i)
+ 
+}
+ 
+var a,c,u,m=document.createElement("canvas"),
+ 
+d=t(),l="c_n"+d.l,r=m.getContext("2d"),
+ 
+x=window.requestAnimationFrame||window.webkitRequestAnimationFrame||window.mozRequestAnimationFrame||window.oRequestAnimationFrame||window.msRequestAnimationFrame||
+ 
+function(n){
+ 
+window.setTimeout(n,1e3/45)
+ 
+},
+ 
+w=Math.random,y={x:null,y:null,max:2e4};m.id=l,m.style.cssText="position:fixed;top:0;left:0;z-index:"+d.z+";opacity:"+d.o,e("body")[0].appendChild(m),o(),window.οnresize=o,
+ 
+window.οnmοusemοve=function(n){
+ 
+n=n||window.event,y.x=n.clientX,y.y=n.clientY
+ 
+},
+ 
+window.οnmοuseοut=function(){
+ 
+y.x=null,y.y=null
+ 
+};
+ 
+for(var s=[],f=0;d.n>f;f++){
+ 
+var h=w()*a,g=w()*c,v=2*w()-1,p=2*w()-1;s.push({x:h,y:g,xa:v,ya:p,max:6e3})
+ 
+}
+ 
+u=s.concat([y]),
+ 
+setTimeout(function(){i()},100)
+ 
+}();
+ 
+</script>
+</style>
 <link rel="shortcut icon" type="image/x-icon" href="/favicon.png?">
 </head>
 <dody>
-  
+
 <div class="header">顶部</div>
 <div class="nav1">导航栏</div>
 <div class="content1">内容</div>
-黑洞是现代广义相对论中，存在于宇宙空间中的一种天体。黑洞的引力极其强大，使得视界
- 内的逃逸速度大于光速。故而，“黑洞是时空曲率大到光都无法从其事件视界逃脱的天体”。
- 1916年，德国天文学家卡尔·史瓦西通过计算得到了爱因斯坦场方程的一个真空解，这个解
- 表明，如果一个静态球对称星体实际半径小于一个定值，其周围会产生奇异的现象，即存在
- 一个界面——“视界”，一旦进入这个界面，即使光也无法逃脱。这个定值称作史瓦西半径，这
- 种“不可思议的天体”被美国物理学家约翰·阿奇博尔德·惠勒命名为“黑洞”。
-黑洞无法直接观测，但可以借由间接方式得知其存在与质量，并且观测到它对其他事物的影响
- 。借由物体被吸入之前的因黑洞引力带来的加速度导致的摩擦而放出x射线和γ射线的“边缘讯
- 息”，可以获取黑洞存在的讯息。推测出黑洞的存在也可借由间接观测恒星或星际云气团绕行
- 轨迹，还可以取得位置以及质量。北京时间2019年4月10日21时，人类首张黑洞照片面世，
- 该黑洞位于室女座一个巨椭圆星系M87的中心，距离地球5500万光年，质量约为太阳的65亿倍。
- 它的核心区域存在一个阴影，周围环绕一个新月状光环。爱因斯坦广义相对论被证明在极端条
- 件下仍然成立
-<div class="nav2">导航栏2</div>
-<div class="content2">内容2</div>
-<br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
-<br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
-<br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
-<script src="jquery-1.12.3.min.js"></script>
-<script type="text/javascript">
-    // 获取导航栏到屏幕顶部的距离
-    var oTop1 = $(".nav1").offset().top;
-    var oTop2 = $(".nav2").offset().top;
-    //获取导航栏的高度，此高度用于保证内容的平滑过渡
-    var martop1 = $('.nav1').outerHeight();
-    var martop2 = $('.nav2').outerHeight();
-    var sTop = 0;
-    // 监听页面的滚动
-    $(window).scroll(function () {
-        // 获取页面向上滚动的距离
-        sTop = $(this).scrollTop();
-        // 当导航栏到达屏幕顶端
-        if (sTop >= oTop1) {
-            // 修改导航栏position属性，使之固定在屏幕顶端
-            $(".nav1").css({ "position": "fixed", "top": "0" });
-            // 修改内容的margin-top值，保证平滑过渡
-            $(".content1").css({ "margin-top": martop1 });
-        } else {
-            // 当导航栏脱离屏幕顶端时，回复原来的属性
-            $(".nav1").css({ "position": "static" });
-            $(".content1").css({ "margin-top": "0" });
-        }
-        if (sTop >= oTop2) {
-            // 修改导航栏position属性，使之固定在屏幕顶端
-            $(".nav2").css({ "position": "fixed", "top": "0" });
-            // 修改内容的margin-top值，保证平滑过渡
-            $(".content2").css({ "margin-top": martop2 });
-        } else {
-            // 当导航栏脱离屏幕顶端时，回复原来的属性
-            $(".nav2").css({ "position": "static" });
-            $(".content2").css({ "margin-top": "0" });
-        }
-    });
-</script>
 
 </body>
 
