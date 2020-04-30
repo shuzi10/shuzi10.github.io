@@ -5,7 +5,6 @@
 </head>
 <body></body>
 <script>
-	var clickCount = 0;
     document.onclick = function(e) {
  
 		/**
@@ -14,37 +13,29 @@
 		 * 过渡结束后移除dom
 		 * @author:slzs
 		 */
-        var symbol = document.createElement("b");
+        var symbol = document.createElement("div");
  
         symbol.style.position = "absolute";
-		symbol.style.left = (e.pageX - 10) + "px";
-        symbol.style.top = (e.pageY - 15) + "px";
+		symbol.style.left = (e.pageX) + "px";
+        symbol.style.top = (e.pageY) + "px";
         symbol.style.zIndex = 9999;
-        symbol.style.userSelect = "none"; // 禁止文本被选中，影响美观
-        symbol.style.fontSize = "18px"; 
-        symbol.style.color = `rgb(${Math.floor(Math.random()*256)},${Math.floor(Math.random()*256)},${Math.floor(Math.random()*256)})`; // 随机颜色
 		symbol.style.transition="all 1.5s";
-		symbol.addEventListener("transitionend",function(et){ // 动画结束移除dom
-			if(et.propertyName == "opacity" && et.srcElement.style.opacity==0)
-				et.srcElement.remove();
-		});
+		symbol.style.border="1px red solid";
+        symbol.style.borderColor = `rgb(${Math.floor(Math.random()*256)},${Math.floor(Math.random()*256)},${Math.floor(Math.random()*256)})`; // 随机颜色
+		symbol.style.borderRadius="100%";
+        symbol.style.width = "0px";
+        symbol.style.height = "0px";
+ 		symbol.addEventListener("transitionend",function(et){ // 动画结束移除dom
+ 			if(et.propertyName == "opacity" && et.srcElement.style.opacity==0)
+ 				et.srcElement.remove();
+ 		});
  
-		// 轮换几个预制字符
-		switch(++clickCount){
-			case 1:
-		        symbol.innerText = "✔";
-				break;
-			case 2:
-		        symbol.innerText = "❤";
-				break;
-			default:
-		        symbol.innerText = "☺";
-				clickCount = 0;
-		}
         document.body.appendChild(symbol);
  
         requestAnimationFrame(()=>{
-	        symbol.style.top = (e.pageY - 100) + "px";
+	        symbol.style.width = "80px";
+            symbol.style.margin = "-7px -40px";
+	        symbol.style.height = "14px";
             symbol.style.opacity = 0;
         });
     };
