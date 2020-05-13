@@ -27,6 +27,38 @@
 <body>
 	<script src="//cdn.bootcss.com/canvas-nest.js/1.0.1/canvas-nest.min.js"></script>
 	<!--装饰代码-->
+	
+	<script type="text/javascript">
+/*富强民主文明和谐*/
+var a_idx = 0;
+jQuery(document).ready(function($) {
+$("body").click(function(e) {
+var a = new Array("automobile", "gallery", "logo", "typeface", "clothing", "Shading", "CG" ,"UI", "Map", "color", "compress", "wallpaper", "poster", "book");
+var $i = $("<span/>").text(a[a_idx]);
+a_idx = (a_idx + 1) % a.length;
+var x = e.pageX,
+y = e.pageY;
+$i.css({
+"z-index": 9999,
+"top": y - 20,
+"left": x,
+"position": "absolute",
+"font-weight": "bold",
+"color": "#ff6651"
+});
+$("body").append($i);
+$i.animate({
+"top": y - 180,
+"opacity": 0
+},
+1500,
+function() {
+$i.remove();
+});
+});
+});
+</script>
+	
 	<p><h1 class="ty">Bookmarks</h1></p>
 	<div>
 		<h3 class="ty" style="position: fixed;right: 240px;top: 12px;">
