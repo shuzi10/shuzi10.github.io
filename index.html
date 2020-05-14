@@ -5,38 +5,38 @@
 <title>shuzi书签</title>
 <link href="/images/favicon.ico" rel="shortcut icon">
 
-<script type="text/javascript">
-/*富强民主文明和谐*/
-var a_idx = 0;
-jQuery(document).ready(function($) {
-$("body").click(function(e) {
-var a = new Array("automobile", "gallery", "logo", "typeface", "clothing", "Shading", "CG" ,"UI", "Map", "color", "compress", "wallpaper", "poster", "book");
-var $i = $("<span/>").text(a[a_idx]);
-a_idx = (a_idx + 1) % a.length;
-var x = e.pageX,
-y = e.pageY;
-$i.css({
-"z-index": 9999,
-"top": y - 20,
-"left": x,
-"position": "absolute",
-"font-weight": "bold",
-"color": "#ff6651"
-});
-$("body").append($i);
-$i.animate({
-"top": y - 180,
-"opacity": 0
-},
-1500,
-function() {
-$i.remove();
-});
-});
-});
-</script>
-
 	<style>
+		<script type="text/javascript">
+		/*富强民主文明和谐*/
+		var a_idx = 0;
+		jQuery(document).ready(function($) {
+		$("body").click(function(e) {
+		var a = new Array("automobile", "gallery", "logo", "typeface", "clothing", "Shading", "CG" ,"UI", "Map", "color", "compress", "wallpaper", "poster", "book");
+		var $i = $("<span/>").text(a[a_idx]);
+		a_idx = (a_idx + 1) % a.length;
+		var x = e.pageX,
+		y = e.pageY;
+		$i.css({
+		"z-index": 9999,
+		"top": y - 20,
+		"left": x,
+		"position": "absolute",
+		"font-weight": "bold",
+		"color": "#ff6651"
+		});
+		$("body").append($i);
+		$i.animate({
+		"top": y - 180,
+		"opacity": 0
+		},
+		1500,
+		function() {
+		$i.remove();
+		});
+		});
+		});
+		</script>
+		
 		<script type="text/javascript" color="0,0,255" opacity='0.7' zIndex="-2" count="99" src="//cdn.bootcss.com/canvas-nest.js/1.0.1/canvas-nest.min.js"></script>
 		body {background-color: #5e5e5e;}
 		.ty {color: black;}
