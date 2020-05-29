@@ -6,6 +6,34 @@
 <link href="/images/favicon.ico" rel="shortcut icon">
 	
 	<style>
+		.pause {
+            height: 50px;
+            background: url(images/musicbtn.png) no-repeat;
+            display: block;
+            background-position: 0 bottom;
+        }
+ 
+        .play {
+            height: 50px;
+            background: url(images/musicbtn.png) no-repeat;
+            display: block;
+        }
+		
+		function autoPlay() {
+            var myAuto = document.getElementById('bgMusic');
+            var btn = document.getElementById('audioBtn');
+            if (myAuto.paused) {
+                myAuto.play();
+                btn.classList.remove("pause");
+                btn.classList.add("play");
+            } else {
+                myAuto.pause();
+ 
+                btn.classList.remove("play");
+                btn.classList.add("pause");
+            }
+ 
+        }
 		
 		<script type="text/javascript">
 		/*富强民主文明和谐*/
@@ -53,7 +81,8 @@
 	</style>
 </head>
 <body>
-	<audio id="lskds" src="/images/meng.mp3" autoplay="autoplay" loop="loop" preload="auto"></audio>
+	<a class="play" id="audioBtn" style="cursor:pointer;" οnclick="autoPlay()"></a>
+                    <audio id="bgMusic" src="/meng.mp3" autoplay preload loop="loop"></audio>
 	
 	<p><h1 class="ty">各种网页</h1></p>
 	<h3 class="ty" id="h47">代码学习网页</h3>
