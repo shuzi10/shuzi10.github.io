@@ -1,63 +1,114 @@
 <!DOCTYPE html>
 <html>
 	<head>
-		<base target="_blank">
-		
 		<meat charset="utf-8">
 		
 		<title>shuzi书签</title>
+		<!--网址顶页名称-->
 		
 		<link href="/images/favicon.ico" rel="shortcut icon">
+		<!--外联网址logo-->
+			
+		<base target="_blank">
+		<!--将链接的打开方式定为新建窗口-->
 		
 		<style type="text/css">
+			
+			/*----------------↓装饰代码↓----------------*/
+			<script type="text/javascript"
+				color="190,190,150"
+				opacity='0.8'
+				zImdex="-2"
+				count="99"
+				src="//cdn.bootcss.com/canvas-nest.js/1.0.1/canvas-nest.min.js">
+			</script>
+			body 
+			{
+				backgrond-color: #e8e8e8;
+			}
+			/*----------------↑装饰代码↑----------------*/
 
-			<script type="text/javascript" color="190,190,150" opacity='0.8' zImdex="-2" count="99" src="//cdn.bootcss.com/canvas-nest.js/1.0.1/canvas-nest.min.js"></script>
-			body {backgrond-color: #e8e8e8;}
-			/*装饰代码*/
+			a:link 
+			{
+				color:#4d4d4d;
+				text-decoration:none;
+			}/*鼠标未点击过*/
+			
+			a:visited 
+			{
+				color:#4d4d4d;
+				text-decoration:none;
+			}/*鼠标已点击过*/
+			
+			a:hover 
+			{
+				color:black;
+				text-decoration:none;
+			}/*鼠标悬停时*/
+			
+			a:active 
+			{
+				color:black;
+				text-decoration:none;
+			}/*鼠标点击时*/
 
-			a:link {color:#4d4d4d;text-decoration:none;}
-			a:visited {color:#4d4d4d;text-decoration:none;}
-			a:hover {color:black;text-decoration:none;}
-			a:active {color:black;text-decoration:none;}
-			/*链接*/
+			.w 
+			{
+				width:80%; 
+				height:8000px;
+				margin:40px 0px 0px 350px;
+			}/*整体盒子*/
 
-			.w {width:81%; height:8000px;margin:40px 5px 0px 280px;}
+			.w0 
+			{
+				width:50%;
+				height:7000px;
+				overflow: hidden;
+				float:left;
+			}/*左侧竖排的盒子*/
 
-			.w0 {width:48%;height:7000px;background-color:white; position:relative; overflow: hidden;float:left;}
-			/*左侧竖排的盒子*/
+			.w1 
+			{
+				width:48%;
+				height:7000px;
+				overflow: hidden;
+				float:right;
+			}/*右侧竖排的盒子*/
 
-			.w1 {width:48%;height:7000px;background-color:white; position:relative; overflow: hidden;float:right;}
-			/*右侧竖排的盒子*/
+			.zt1 
+			{
+				font-family:Arial;
+				font-size:18px;
+			}/*英文字体兼容*/
 
-			.z1 {color:black;font-family:Arial; font-weight:bold;font-size:34px;}
-			/*标题英文(好久没编辑了，突然发现这个代码只对应头部的文字....)*/
+			.zt2 
+			{
+				font-family:微软雅黑;
+				font-size:17px;
+			}/*中文字体兼容*/
 
-			.z2 {color:black;font-family:微软雅黑;font-size:24px;position:relative;top:16px;}
-			/*标题中文(同上...)*/
+			.x 
+			{
+				width:600px;
+				height:2px;
+				background-color:black;
+			}/*次标题下划线*/
 
-			.zt1 {font-family:Arial;font-size:18px;}
-			/*英文字体兼容*/
+			.t img
+			{
+				width:600px;
+				height:170px;
+			}/*标题的图片大小*/
 
-			.zt2 {font-family:微软雅黑;font-size:17px;}
-			/*中文字体兼容*/
+			.h1 
+			{
+				font-family:Arial;
+			}/*次标题英文*/
 
-			.kuai1 {width:10px;height:26px;background-color:black;position:relative;top:-66px;}
-			/*标题英文的装饰(绝了，看来看去突然发现这个代码是头部英文左边的一个小方块)*/
-
-			.kuai2 {width:145px;height:4px;background-color:black;position:relative;top:-4px;}
-			/*标题中文的装饰(一样，头部中文下边的横线编辑)*/
-
-			.x {width:600px;height:2px;background-color:black;}
-			/*次标题下划线*/
-
-			.t img{width:600px;height:170px;}
-			/*标题的图片大小*/
-
-			.h1 {font-family:Arial;}
-			/*次标题英文*/
-
-			.h2 {font-family:微软雅黑;}
-			/*次标题中文*/
+			.h2 
+			{
+				font-family:微软雅黑;
+			}/*次标题中文*/
 
 		</style>
 
@@ -71,14 +122,14 @@
 
 	<div class="w">
 		<div class="w0">
-			<div class="z1">. Designing Web Bookmarks</div>
+			<div style="color:black;font-family:Arial; font-weight:bold;font-size:34px;">. Designing Web Bookmarks</div>
 
-			<div class="z2">设计网站书签</div>
+			<div style="color:black;font-family:微软雅黑;font-size:24px;position:relative;top:16px;">设计网站书签</div>
 
-			<div class="kuai1"></div>
+			<div style="width:10px;height:26px;background-color:black;position:relative;top:-66px;"></div>
 			<!--标题英文的装饰(绝了，看来看去突然发现这个代码是头部英文左边的一个小方块)-->
 
-			<div class="kuai2"></div>
+			<div style="width:145px;height:4px;background-color:black;position:relative;top:-4px;"></div>
 			<!--标题中文的装饰(一样，头部中文下边的横线编辑)-->
 
 			<!--隔栏-->
